@@ -23,11 +23,11 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 // clang-format off
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [0] = LAYOUT_universal(
-    KC_ESC   , KC_1            , KC_2            , KC_3            , KC_4            , KC_5     ,                         KC_6        , KC_7            , KC_8            , KC_9            , KC_0               , KC_BSPC  ,
-    KC_TAB   , KC_Q            , KC_W            , KC_E            , KC_R            , KC_T     ,                         KC_Y        , KC_U            , KC_I            , KC_O            , KC_P               , KC_DEL   ,
-    KC_LCTL  ,MT(MOD_LGUI,KC_A),MT(MOD_LALT,KC_S),MT(MOD_LCTL,KC_D),MT(MOD_LSFT,KC_F), KC_G     ,                         KC_H        ,MT(MOD_RSFT,KC_J),MT(MOD_RCTL,KC_K),MT(MOD_LALT,KC_L),MT(MOD_RGUI,KC_SCLN),S(KC_7)   ,
-    KC_LSFT  , KC_Z            , KC_X            , KC_C            , KC_V            , KC_B     ,  KC_RBRC     , KC_NUHS, KC_N        , KC_M            , KC_COMM         , KC_DOT          , KC_SLSH            , KC_RSFT  ,
-    _______  , KC_LCTL         , KC_LALT         , KC_LGUI         ,LT(1,KC_ESC)     ,LT(2,KC_SPC),LT(3,KC_TAB),LT(5,KC_ENT),LT(4,KC_BSPC), LT(1,KC_DEL),KC_RGUI          , _______         , _______            , _______
+    KC_ESC   , KC_1            , KC_2            , KC_3            , KC_4            , KC_5        ,                            KC_6        , KC_7            , KC_8            , KC_9            , KC_0               , KC_BSPC  ,
+    KC_TAB   , KC_Q            , KC_W            , KC_E            , KC_R            , KC_T        ,                            KC_Y        , KC_U            , KC_I            , KC_O            , KC_P               , KC_DEL   ,
+    KC_LCTL  ,MT(MOD_LGUI,KC_A),MT(MOD_LALT,KC_S),MT(MOD_LCTL,KC_D),MT(MOD_LSFT,KC_F), KC_G        ,                            KC_H        ,MT(MOD_RSFT,KC_J),MT(MOD_RCTL,KC_K),MT(MOD_LALT,KC_L),MT(MOD_RGUI,KC_SCLN), KC_QUOT  ,
+    KC_LSFT  , KC_Z            , KC_X            , KC_C            , KC_V            , KC_B        , KC_RBRC     , KC_NUHS    , KC_N        , KC_M            , KC_COMM         , KC_DOT          , KC_SLSH            , KC_RSFT  ,
+    _______  , KC_LCTL         , KC_LALT         , KC_LGUI         , LT(1,KC_ESC)    ,LT(2,KC_SPC) , LT(3,KC_TAB),LT(4,KC_ENT),LT(5,KC_BSPC), _______         , _______         , _______         , _______            , _______
   ),
 
   [1] = LAYOUT_universal(
@@ -40,10 +40,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
   [2] = LAYOUT_universal(
     SSNP_FRE , KC_F1    , KC_F2    , KC_F3    , KC_F4    , KC_F5    ,                                  KC_F6    , KC_F7    , KC_F8    , KC_F9    , KC_F10   , KC_F11   ,
-    SSNP_VRT , _______  , KC_7     , KC_8     , KC_9     , _______  ,                                  _______  , KC_LEFT  , KC_UP    , KC_RGHT  , _______  , KC_F12   ,
-    SSNP_HOR , _______  , KC_4     , KC_5     , KC_6     ,S(KC_SCLN),                                  KC_PGUP  , KC_BTN1  , KC_DOWN  , KC_BTN2  , KC_BTN3  , _______  ,
-    _______  , _______  , KC_1     , KC_2     , KC_3     ,S(KC_MINS), S(KC_8)  ,            S(KC_9)  , KC_PGDN  , _______  , _______  , _______  , _______  , _______  ,
-    _______  , _______  , KC_0     , KC_DOT   , _______  , _______  , _______  ,             KC_DEL  , _______  , _______  , _______  , _______  , _______  , _______
+    SSNP_VRT , _______  , _______  , _______  , _______  , _______  ,                                  _______  , KC_LEFT  , KC_UP    , KC_RGHT  , _______  , KC_F12   ,
+    SSNP_HOR , _______  , _______  , _______  , _______  , _______  ,                                  KC_PGUP  , KC_BTN1  , KC_DOWN  , KC_BTN2  , KC_BTN3  , _______  ,
+    _______  , _______  , _______  , _______  , _______  , _______  , _______  ,            _______  , KC_PGDN  , _______  , _______  , _______  , _______  , _______  ,
+    _______  , _______  , _______  , _______  , _______  , _______  , _______  ,            _______  , _______  , _______  , _______  , _______  , _______  , _______
   ),
 
   [3] = LAYOUT_universal(
@@ -56,18 +56,18 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
   [4] = LAYOUT_universal(
     SSNP_FRE , _______  , _______  , _______  , _______  , _______  ,                                  _______  , _______  , _______  , _______  , _______  , _______  ,
-    SSNP_VRT , _______  , _______  , _______  , KC_BTN3  , _______  ,                                  _______  , _______  , _______  , _______  , _______  , _______  ,
-    SSNP_HOR , _______  , _______  , KC_BTN1  , KC_BTN2  , _______  ,                                  _______  , KC_LEFT  , KC_DOWN  , KC_UP    , KC_RGHT  , _______  ,
-    _______  , _______  , _______  , _______  , _______  , _______  , _______  ,            _______  , _______  , KC_HOME  , KC_PGDN  , KC_PGUP  , KC_END   , _______  ,
-    _______  , _______  , _______  , _______  , _______  , _______  , _______  ,             KC_DEL  , _______  , _______  , _______  , _______  , _______  , _______
-  ),
-
-  [5] = LAYOUT_universal(
-    SSNP_FRE , _______  , _______  , _______  , _______  , _______  ,                                  _______  , _______  , _______  , _______  , _______  , _______  ,
     SSNP_VRT , KC_QUOT  , KC_LT    , KC_GT    , KC_DQUO  , KC_DOT   ,                                  KC_AMPR  , KC_UNDS  , KC_LBRC  , KC_RBRC  , KC_PERC  , _______  , 
     SSNP_HOR , KC_EXLM  , KC_MINS  , KC_PLUS  , KC_EQL   , KC_HASH  ,                                  KC_PIPE  , KC_COLN  , KC_LPRN  , KC_RPRN  , KC_QUES  , _______  ,
     _______  , KC_CIRC  , KC_SLSH  , KC_ASTR  , KC_BSLS  , KC_UNDS  , _______  ,             _______ , KC_TILD  , KC_DLR   , KC_LCBR  , KC_RCBR  , KC_AT    , _______  ,
     _______  , _______  , _______  , _______  , _______  , _______  , _______  ,             _______ , _______  , _______  , _______  , _______  , _______  , _______
+  ),
+
+  [5] = LAYOUT_universal(
+    SSNP_FRE , _______  , _______  , _______  , _______  , _______  ,                                  _______  , _______  , _______  , _______  , _______  , _______  ,
+    SSNP_VRT , _______  , _______  , _______  , KC_BTN3  , _______  ,                                  _______  , _______  , _______  , _______  , _______  , _______  ,
+    SSNP_HOR , _______  , _______  , KC_BTN1  , KC_BTN2  , _______  ,                                  _______  , KC_LEFT  , KC_DOWN  , KC_UP    , KC_RGHT  , _______  ,
+    _______  , _______  , _______  , _______  , _______  , _______  , _______  ,            _______  , _______  , KC_HOME  , KC_PGDN  , KC_PGUP  , KC_END   , _______  ,
+    _______  , _______  , _______  , _______  , _______  , _______  , _______  ,             KC_DEL  , _______  , _______  , _______  , _______  , _______  , _______
   ),
 };
 // clang-format on
